@@ -1,5 +1,6 @@
 {
   "name": "mstudio-dev/contao-alttextgenerator",
+  "version": "0.1.1",
   "description": "Contao 5 bundle for automatic ALT text generation on image uploads using OpenAI",
   "type": "contao-bundle",
   "license": "proprietary",
