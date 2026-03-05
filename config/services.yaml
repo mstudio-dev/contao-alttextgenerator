@@ -1,0 +1,21 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  Mstudio\ContaoAltTextGenerator\:
+    resource: ../src/
+    exclude:
+      - ../src/ContaoManager/
+      - ../src/DependencyInjection/
+      - ../src/MstudioContaoAltTextGeneratorBundle.php
+
+  Mstudio\ContaoAltTextGenerator\Service\AltTextGenerator:
+    arguments:
+      $apiKey: '%env(OPENAI_API_KEY)%'
+      $model: '%mstudio_contao_alt_text_generator.model%'
+      $projectDir: '%kernel.project_dir%'
+
+  Mstudio\ContaoAltTextGenerator\EventListener\ImageUploadListener:
+    arguments:
+      $replaceExistingAlt: '%mstudio_contao_alt_text_generator.replace_existing_alt%'

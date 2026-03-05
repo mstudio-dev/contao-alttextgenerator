@@ -1,0 +1,30 @@
+{
+  "name": "mstudio-dev/contao-alttextgenerator",
+  "description": "Contao 5 bundle for automatic ALT text generation on image uploads using OpenAI",
+  "type": "contao-bundle",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Markus Schnagl",
+      "email": "mail@mstudio.de"
+    }
+  ],
+  "homepage": "https://github.com/mstudio-dev/contao-alttextgenerator",
+  "support": {
+    "source": "https://github.com/mstudio-dev/contao-alttextgenerator"
+  },
+  "require": {
+    "php": "^8.2",
+    "contao/core-bundle": "^5.0",
+    "contao/manager-plugin": "^2.0",
+    "symfony/http-client": "^6.4 || ^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Mstudio\\ContaoAltTextGenerator\\": "src/"
+    }
+  },
+  "extra": {
+    "contao-manager-plugin": "Mstudio\\ContaoAltTextGenerator\\ContaoManager\\Plugin"
+  }
+}
