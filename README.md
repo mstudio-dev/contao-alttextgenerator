@@ -2,6 +2,11 @@
 
 Automatisches Erzeugen eines deutschen ALT-Textes beim Upload von Bildern in Contao 5.x.
 
+## Voraussetzungen
+
+- PHP 8.2+
+- PHP-Extensions: `fileinfo`, `mbstring`
+
 ## Installation
 
 1. Paket installieren:
